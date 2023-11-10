@@ -4,7 +4,6 @@ import { checkWinner } from '../logic/chechWinner'
 import { TURNS } from '../components/constants'
 
 export const useUpdateBoard = () => {
-  Array(9).fill(null)
   const [board, setboard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
     if (boardFromStorage) return JSON.parse(boardFromStorage)
